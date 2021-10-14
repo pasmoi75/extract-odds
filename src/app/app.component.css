@@ -1,0 +1,40 @@
+body {
+  padding: 14px;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  margin: 20px auto;
+  table-layout: auto;
+}
+
+.fixed {
+  table-layout: fixed;
+}
+
+table,
+td,
+th {
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  border: solid 1px;
+  text-align: center;
+}
+
+.center {
+
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  display: flex;
+
+}
+
+.bold {
+  font-weight: 900;
+}

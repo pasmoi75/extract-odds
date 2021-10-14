@@ -1,0 +1,29 @@
+<script src="app.component.spec.ts"></script><h2 class="center">Test</h2>
+
+<div *ngFor="let country of getKeys()">
+  <h2 class="center">{{country}}</h2>
+  <table id="t">
+    <thead>
+    <tr>
+      <th>Heure</th>
+      <th>Match</th>
+      <th>Equipe à Domicile</th>
+      <th>Equipe à l'Extérieur</th>
+      <th>Un des deux équipes</th>
+      <th>Les deux équipes</th>
+      <th>Aucun des équipes</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let market of mapOfCountryAndGame.get(country)">
+      <td> {{getTime(market)}}</td>
+      <td> {{market.eventName}}</td>
+      <td class="bold"><span [ngStyle]="{'color' : getDOMColor(market)}">{{getSelection(market, bets.DOM)}} </span></td>
+      <td class="bold"><span [ngStyle]="{'color' : getEXTColor(market)}">{{getSelection(market, bets.EXT)}} </span></td>
+      <td class="bold"><span [ngStyle]="{'color' : getONEColor(market)}">{{getSelection(market, bets.ONE)}} </span></td>
+      <td class="bold"><span>{{getSelection(market, bets.BOTH)}} </span></td>
+      <td class="bold"><span [ngStyle]="{'color' : getNONEColor(market)}">{{getSelection(market, bets.NONE)}} </span></td>
+    </tr>
+    </tbody>
+  </table>
+</div>

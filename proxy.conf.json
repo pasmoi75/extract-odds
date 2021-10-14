@@ -1,0 +1,10 @@
+{
+  "/api": {
+    "target": "http://npmjs.org",
+    "secure": true,
+    "pathRewrite": {
+      "^/api": ""
+    },
+    "changeOrigin": true
+  }
+}
